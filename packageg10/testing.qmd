@@ -4,10 +4,17 @@ format: html
 editor: visual
 ---
 
+Funtion 1: 
+```{r}
+source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R")
+devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
+create_boxplot(data, "Average.Medicare.Payments")  # or use any of the valid types
+```
+
+
 ```{r}
 #change the path as needed 
 source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R")
-
 devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
 ```
 
@@ -16,5 +23,4 @@ load("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DR
 result_mean <- calculate_drg_statistics(data, "mean")
 print(result_mean)
 ```
-
 
