@@ -5,6 +5,7 @@ editor: visual
 ---
 
 ```{r}
+#change the path as needed 
 source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R")
 
 devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
