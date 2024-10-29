@@ -18,7 +18,9 @@ Funtion 1:
 ```{r}
 source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R")
 devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
-create_boxplot(data, "Average.Medicare.Payments")  # or use any of the valid types
+create_boxplot(data, "Average.Medicare.Payments")  # Boxplot for Medicare Payments
+create_boxplot(data, "Average.Total.Payments")     # Boxplot for Total Payments
+create_boxplot(data, "Average.Covered.Charges") # Boxplot for Covered Charges
 ```
 
 Function 2

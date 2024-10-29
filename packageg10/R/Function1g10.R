@@ -1,3 +1,31 @@
+#' Create Boxplot for DRG Payment Data
+#'
+#' This function generates a boxplot for a specified payment type by DRG code.
+#' The plot shows the distribution of the chosen payment type across different DRG codes,
+#' allowing for comparison of payment data categories such as "Average Medicare Payments",
+#' "Average Total Payments", and "Average Covered Charges".
+#'
+#' @param data A data frame containing DRG payment data. Must include the columns
+#'   "DRG.Definition", "Average.Medicare.Payments", "Average.Total.Payments",
+#'   and "Average.Covered.Charges".
+#' @param payment_type A character string specifying the type of payment data to plot.
+#'   Acceptable values are "Average.Medicare.Payments", "Average.Total.Payments",
+#'   or "Average.Covered.Charges".
+#'
+#' @return A boxplot showing the distribution of the specified payment type by DRG code.
+#' @export
+#'
+#' @examples
+#' # Example usage:
+#' data <- data.frame(
+#'   DRG.Definition = c("001 - Heart transplant", "002 - Lung transplant", "003 - Liver transplant"),
+#'   Average.Medicare.Payments = c(50000, 30000, 40000),
+#'   Average.Total.Payments = c(60000, 35000, 45000),
+#'   Average.Covered.Charges = c(80000, 50000, 70000)
+#' )
+#' create_boxplot(data, "Average.Medicare.Payments")  # Creates a boxplot for Medicare payments
+#' create_boxplot(data, "Average.Total.Payments")     # Creates a boxplot for total payments
+
 create_boxplot <- function(data, payment_type) {
 
   if (payment_type == "Average.Medicare.Payments") {
