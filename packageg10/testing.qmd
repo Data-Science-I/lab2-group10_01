@@ -9,6 +9,11 @@ editor: visual
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
+Load the data
+```{r}
+load("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData")
+```
+
 Funtion 1: 
 ```{r}
 source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R")
@@ -16,7 +21,7 @@ devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packa
 create_boxplot(data, "Average.Medicare.Payments")  # or use any of the valid types
 ```
 
-
+Function 2
 ```{r}
 #change the path as needed 
 source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R")
@@ -24,7 +29,6 @@ devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packa
 ```
 
 ```{r}
-load("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData")
 result_mean <- calculate_drg_statistics(data, "mean")
 print(result_mean)
 ```
