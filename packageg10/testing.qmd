@@ -1,0 +1,19 @@
+---
+title: "testing"
+format: html
+editor: visual
+---
+
+```{r}
+source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R")
+
+devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
+```
+
+```{r}
+load("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData")
+result_mean <- calculate_drg_statistics(data, "mean")
+print(result_mean)
+```
+
+
