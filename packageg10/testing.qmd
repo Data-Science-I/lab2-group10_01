@@ -1,8 +1,13 @@
 ---
-title: "testing"
+title: "Testing the Two Functions"
+author: "Group 10"
 format: html
 editor: visual
 ---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
 
 Funtion 1: 
 ```{r}
