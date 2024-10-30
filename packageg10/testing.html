@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Group 10">
 
-<title>testing</title>
+<title>Testing the Two Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,13 +80,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">testing</h1>
+<h1 class="title">Testing the Two Functions</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Group 10 </p>
+          </div>
+  </div>
     
   
     
@@ -97,10 +104,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#change the path as needed </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Funtion 1:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>── R CMD build ─────────────────────────────────────────────────────────────────
 * checking for file ‘/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/DESCRIPTION’ ... OK
@@ -116,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 * building ‘packageg10_0.1.0.tar.gz’
 
 Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpiPUMUu/packageg10_0.1.0.tar.gz \
+  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpyWM2gy/packageg10_0.1.0.tar.gz \
   --install-tests 
 * installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
 * installing *source* package ‘packageg10’ ...
@@ -133,57 +146,127 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 ** testing if installed package keeps a record of temporary installation path
 * DONE (packageg10)</code></pre>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 8494.491</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>── R CMD build ─────────────────────────────────────────────────────────────────
-* checking for file ‘/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/DESCRIPTION’ ... OK
-* preparing ‘packageg10’:
-* checking DESCRIPTION meta-information ... OK
-* checking for LF line-endings in source and make files and shell scripts
-* checking for empty or unneeded directories
-  NB: this package now depends on R (&gt;= 3.5.0)
-  WARNING: Added dependency on R &gt;= 3.5.0 because serialized objects in
-  serialize/load version 3 cannot be read in older versions of R.
-  File(s) containing such objects:
-    ‘packageg10/data/DRG_data.RData’
-* building ‘packageg10_0.1.0.tar.gz’
-
-Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpiPUMUu/packageg10_0.1.0.tar.gz \
-  --install-tests 
-* installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
-* installing *source* package ‘packageg10’ ...
-** using staged installation
-** R
-** data
-*** moving datasets to lazyload DB
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (packageg10)</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># or use any of the valid types</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># Boxplot for Medicare Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="testing_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Total.Payments"</span>)     <span class="co"># Boxplot for Total Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testing_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Covered.Charges"</span>) <span class="co"># Boxplot for Covered Charges</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testing_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Function 2</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#change the path as needed </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/DESCRIPTION’ ... OK
+* preparing ‘packageg10’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+  NB: this package now depends on R (&gt;= 3.5.0)
+  WARNING: Added dependency on R &gt;= 3.5.0 because serialized objects in
+  serialize/load version 3 cannot be read in older versions of R.
+  File(s) containing such objects:
+    ‘packageg10/data/DRG_data.RData’
+* building ‘packageg10_0.1.0.tar.gz’
+
+Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
+  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpyWM2gy/packageg10_0.1.0.tar.gz \
+  --install-tests 
+* installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
+* installing *source* package ‘packageg10’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (packageg10)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the mean for each DRG Definition</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)  <span class="co"># Displays the mean of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 2
+   DRG.Definition                                                  mean_payment
+   &lt;chr&gt;                                                                  &lt;dbl&gt;
+ 1 039 - EXTRACRANIAL PROCEDURES W/O CC/MCC                               5556.
+ 2 057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC                    5702.
+ 3 064 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W MCC            12113.
+ 4 065 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W CC              6782.
+ 5 066 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W/O CC/MCC        4469.
+ 6 069 - TRANSIENT ISCHEMIA                                               3952.
+ 7 074 - CRANIAL &amp; PERIPHERAL NERVE DISORDERS W/O MCC                     5239.
+ 8 101 - SEIZURES W/O MCC                                                 4453.
+ 9 149 - DYSEQUILIBRIUM                                                   3441.
+10 176 - PULMONARY EMBOLISM W/O MCC                                       6078.
+# ℹ 90 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the median for each DRG Definition</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>result_median <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"median"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_median)  <span class="co"># Displays the median of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 2
+   DRG.Definition                                                 median_payment
+   &lt;chr&gt;                                                                   &lt;dbl&gt;
+ 1 039 - EXTRACRANIAL PROCEDURES W/O CC/MCC                                5269.
+ 2 057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC                     5105.
+ 3 064 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W MCC             10956.
+ 4 065 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W CC               6168.
+ 5 066 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W/O CC/M…          4080.
+ 6 069 - TRANSIENT ISCHEMIA                                                3627.
+ 7 074 - CRANIAL &amp; PERIPHERAL NERVE DISORDERS W/O MCC                      4816.
+ 8 101 - SEIZURES W/O MCC                                                  4013.
+ 9 149 - DYSEQUILIBRIUM                                                    3146.
+10 176 - PULMONARY EMBOLISM W/O MCC                                        5645.
+# ℹ 90 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the standard deviation for each DRG Definition</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>result_sd <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"sd"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_sd)  <span class="co"># Displays the standard deviation of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 2
+   DRG.Definition                                                  sd_payment
+   &lt;chr&gt;                                                                &lt;dbl&gt;
+ 1 039 - EXTRACRANIAL PROCEDURES W/O CC/MCC                             1236.
+ 2 057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC                  1974.
+ 3 064 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W MCC           3702.
+ 4 065 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W CC            1979.
+ 5 066 - INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W/O CC/MCC      1272.
+ 6 069 - TRANSIENT ISCHEMIA                                             1095.
+ 7 074 - CRANIAL &amp; PERIPHERAL NERVE DISORDERS W/O MCC                   1542.
+ 8 101 - SEIZURES W/O MCC                                               1379.
+ 9 149 - DYSEQUILIBRIUM                                                 1076.
+10 176 - PULMONARY EMBOLISM W/O MCC                                     1505.
+# ℹ 90 more rows</code></pre>
 </div>
 </div>
 
