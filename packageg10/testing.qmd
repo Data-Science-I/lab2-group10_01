@@ -10,24 +10,27 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 Load the data
+
 ```{r}
-load("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/data/DRG_data.RData")
+load("../packageg10/data/DRG_data.RData")
 ```
 
-Funtion 1: 
+Funtion 1:
+
 ```{r}
-source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function1g10.R")
-devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
+source("../packageg10/R/function1g10.R")
+devtools::install("../packageg10")
 create_boxplot(data, "Average.Medicare.Payments")  # Boxplot for Medicare Payments
 create_boxplot(data, "Average.Total.Payments")     # Boxplot for Total Payments
 create_boxplot(data, "Average.Covered.Charges") # Boxplot for Covered Charges
 ```
 
 Function 2
+
 ```{r}
 #change the path as needed 
-source("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10/R/function2g10.R")
-devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packageg10")
+source("../packageg10/R/function2g10.R")
+devtools::install("../packageg10")
 ```
 
 ```{r}
@@ -44,5 +47,3 @@ print(result_median)  # Displays the median of Average Medicare Payments by DRG 
 result_sd <- calculate_drg_statistics(data, "sd")
 print(result_sd)  # Displays the standard deviation of Average Medicare Payments by DRG Definition
 ```
-
-
