@@ -108,7 +108,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Load the data</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../packageg10/data/DRG_data.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../packageg10/data/DRG_data.RData"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Data-Science-I/lab2-group10_01/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Funtion 1:</p>
 <div class="cell">
@@ -129,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 * building ‘packageg10_0.1.0.tar.gz’
 
 Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpM9cvW8/packageg10_0.1.0.tar.gz \
+  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//Rtmp9ELvA1/packageg10_0.1.0.tar.gz \
   --install-tests 
 * installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
 * installing *source* package ‘packageg10’ ...
@@ -146,7 +149,8 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 ** testing if installed package keeps a record of temporary installation path
 * DONE (packageg10)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># Boxplot for Medicare Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packageg10)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># Boxplot for Medicare Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -191,7 +195,7 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 * building ‘packageg10_0.1.0.tar.gz’
 
 Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//RtmpM9cvW8/packageg10_0.1.0.tar.gz \
+  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//Rtmp9ELvA1/packageg10_0.1.0.tar.gz \
   --install-tests 
 * installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
 * installing *source* package ‘packageg10’ ...
@@ -208,12 +212,13 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 ** testing if installed package keeps a record of temporary installation path
 * DONE (packageg10)</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packageg10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the mean for each DRG Definition</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)  <span class="co"># Displays the mean of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the mean for each DRG Definition</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)  <span class="co"># Displays the mean of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                  mean_payment
@@ -230,9 +235,9 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 10 176 - PULMONARY EMBOLISM W/O MCC                                       6078.
 # ℹ 90 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the median for each DRG Definition</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>result_median <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"median"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_median)  <span class="co"># Displays the median of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the median for each DRG Definition</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>result_median <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"median"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_median)  <span class="co"># Displays the median of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                 median_payment
@@ -249,9 +254,9 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 10 176 - PULMONARY EMBOLISM W/O MCC                                        5645.
 # ℹ 90 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the standard deviation for each DRG Definition</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>result_sd <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"sd"</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_sd)  <span class="co"># Displays the standard deviation of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the standard deviation for each DRG Definition</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>result_sd <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"sd"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_sd)  <span class="co"># Displays the standard deviation of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                  sd_payment

@@ -12,7 +12,10 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 Load the data
 
 ```{r}
+library(readr)
+library(here)
 load("../packageg10/data/DRG_data.RData")
+devtools::install_github("Data-Science-I/lab2-group10_01/packageg10")
 ```
 
 Funtion 1:
@@ -20,6 +23,7 @@ Funtion 1:
 ```{r}
 source("../packageg10/R/function1g10.R")
 devtools::install("../packageg10")
+library(packageg10)
 create_boxplot(data, "Average.Medicare.Payments")  # Boxplot for Medicare Payments
 create_boxplot(data, "Average.Total.Payments")     # Boxplot for Total Payments
 create_boxplot(data, "Average.Covered.Charges") # Boxplot for Covered Charges
@@ -31,6 +35,7 @@ Function 2
 #change the path as needed 
 source("../packageg10/R/function2g10.R")
 devtools::install("../packageg10")
+library(packageg10)
 ```
 
 ```{r}
