@@ -26,7 +26,7 @@ library(roxygen2)
 ```{r}
 library(readr)
 library(here)
-load("../packageg10/data/DRG_data.RData")
+data <- packageg10::data
 ```
 
 Funtion 1:
