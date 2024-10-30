@@ -31,7 +31,18 @@ devtools::install("/Users/michellewong/Downloads/Data_Science_1/lab2-group/packa
 ```
 
 ```{r}
+library(dplyr)
+# Calculate and print the mean for each DRG Definition
 result_mean <- calculate_drg_statistics(data, "mean")
-print(result_mean)
+print(result_mean)  # Displays the mean of Average Medicare Payments by DRG Definition
+
+# Calculate and print the median for each DRG Definition
+result_median <- calculate_drg_statistics(data, "median")
+print(result_median)  # Displays the median of Average Medicare Payments by DRG Definition
+
+# Calculate and print the standard deviation for each DRG Definition
+result_sd <- calculate_drg_statistics(data, "sd")
+print(result_sd)  # Displays the standard deviation of Average Medicare Payments by DRG Definition
 ```
+
 
