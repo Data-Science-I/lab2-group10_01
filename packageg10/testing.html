@@ -112,14 +112,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../packageg10/data/DRG_data.RData"</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Data-Science-I/lab2-group10_01/packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Funtion 1:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../packageg10/R/function1g10.R"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"../packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>── R CMD build ─────────────────────────────────────────────────────────────────
-* checking for file ‘/Users/michellewong/Downloads/Data_Science_1/lab2-group10_01/packageg10/DESCRIPTION’ ... OK
+* checking for file ‘/private/var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T/RtmpVQLQ6a/remotes123d12ce4ad87/Data-Science-I-lab2-group10_01-9fbbbc1bad63e78c949e53b777fd5abbf821923f/packageg10/DESCRIPTION’ ... OK
 * preparing ‘packageg10’:
 * checking DESCRIPTION meta-information ... OK
 * checking for LF line-endings in source and make files and shell scripts
@@ -129,28 +124,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   serialize/load version 3 cannot be read in older versions of R.
   File(s) containing such objects:
     ‘packageg10/data/DRG_data.RData’
-* building ‘packageg10_0.1.0.tar.gz’
-
-Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//Rtmp9ELvA1/packageg10_0.1.0.tar.gz \
-  --install-tests 
-* installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
-* installing *source* package ‘packageg10’ ...
-** using staged installation
-** R
-** data
-*** moving datasets to lazyload DB
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (packageg10)</code></pre>
+* building ‘packageg10_0.1.0.tar.gz’</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packageg10)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># Boxplot for Medicare Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Funtion 1:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#source("../packageg10/R/function1g10.R")</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install("../packageg10")</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packageg10)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Medicare.Payments"</span>)  <span class="co"># Boxplot for Medicare Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -158,7 +140,7 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Total.Payments"</span>)     <span class="co"># Boxplot for Total Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Total.Payments"</span>)     <span class="co"># Boxplot for Total Payments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -166,7 +148,7 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Covered.Charges"</span>) <span class="co"># Boxplot for Covered Charges</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_boxplot</span>(data, <span class="st">"Average.Covered.Charges"</span>) <span class="co"># Boxplot for Covered Charges</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -177,48 +159,16 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 </div>
 <p>Function 2</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#change the path as needed </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../packageg10/R/function2g10.R"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"../packageg10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>── R CMD build ─────────────────────────────────────────────────────────────────
-* checking for file ‘/Users/michellewong/Downloads/Data_Science_1/lab2-group10_01/packageg10/DESCRIPTION’ ... OK
-* preparing ‘packageg10’:
-* checking DESCRIPTION meta-information ... OK
-* checking for LF line-endings in source and make files and shell scripts
-* checking for empty or unneeded directories
-  NB: this package now depends on R (&gt;= 3.5.0)
-  WARNING: Added dependency on R &gt;= 3.5.0 because serialized objects in
-  serialize/load version 3 cannot be read in older versions of R.
-  File(s) containing such objects:
-    ‘packageg10/data/DRG_data.RData’
-* building ‘packageg10_0.1.0.tar.gz’
-
-Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-  /var/folders/sx/mpc7ny790190g619ysw16qxh0000gn/T//Rtmp9ELvA1/packageg10_0.1.0.tar.gz \
-  --install-tests 
-* installing to library ‘/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library’
-* installing *source* package ‘packageg10’ ...
-** using staged installation
-** R
-** data
-*** moving datasets to lazyload DB
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded from temporary location
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (packageg10)</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(packageg10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#change the path as needed </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#source("../packageg10/R/function2g10.R")</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install("../packageg10")</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#library(packageg10)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the mean for each DRG Definition</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)  <span class="co"># Displays the mean of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the mean for each DRG Definition</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>result_mean <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"mean"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_mean)  <span class="co"># Displays the mean of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                  mean_payment
@@ -235,9 +185,9 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 10 176 - PULMONARY EMBOLISM W/O MCC                                       6078.
 # ℹ 90 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the median for each DRG Definition</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>result_median <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"median"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_median)  <span class="co"># Displays the median of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the median for each DRG Definition</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>result_median <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"median"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_median)  <span class="co"># Displays the median of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                 median_payment
@@ -254,9 +204,9 @@ Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
 10 176 - PULMONARY EMBOLISM W/O MCC                                        5645.
 # ℹ 90 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the standard deviation for each DRG Definition</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>result_sd <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"sd"</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_sd)  <span class="co"># Displays the standard deviation of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate and print the standard deviation for each DRG Definition</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>result_sd <span class="ot">&lt;-</span> <span class="fu">calculate_drg_statistics</span>(data, <span class="st">"sd"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result_sd)  <span class="co"># Displays the standard deviation of Average Medicare Payments by DRG Definition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
    DRG.Definition                                                  sd_payment

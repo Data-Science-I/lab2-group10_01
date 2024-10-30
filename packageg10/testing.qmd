@@ -21,8 +21,8 @@ devtools::install_github("Data-Science-I/lab2-group10_01/packageg10")
 Funtion 1:
 
 ```{r}
-source("../packageg10/R/function1g10.R")
-devtools::install("../packageg10")
+#source("../packageg10/R/function1g10.R")
+#devtools::install("../packageg10")
 library(packageg10)
 create_boxplot(data, "Average.Medicare.Payments")  # Boxplot for Medicare Payments
 create_boxplot(data, "Average.Total.Payments")     # Boxplot for Total Payments
@@ -33,9 +33,9 @@ Function 2
 
 ```{r}
 #change the path as needed 
-source("../packageg10/R/function2g10.R")
-devtools::install("../packageg10")
-library(packageg10)
+#source("../packageg10/R/function2g10.R")
+#devtools::install("../packageg10")
+#library(packageg10)
 ```
 
 ```{r}
